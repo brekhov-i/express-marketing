@@ -1,0 +1,43 @@
+.timer {
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  &__days,
+  &__hours,
+  &__minutes {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 12px;
+    line-height: 18px;
+    color: $colorBlack;
+    margin-right: 2px;
+    span {
+      font-size: 24px;
+      line-height: 31px;
+      color: $colorPrimary;
+    }
+    &.disabled {
+      span {
+        color: $colorGrey;
+      }
+    }
+  }
+  @media (max-width: 576px) {
+    &__days,
+    &__hours,
+    &__minutes {
+      font-size: 10px;
+      line-height: 18px;
+      span {
+        font-size: 18px;
+        line-height: 26px;
+      }
+    }
+  }
+}
