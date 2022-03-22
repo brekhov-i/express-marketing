@@ -1,0 +1,362 @@
+.forProfersional {
+  width: 100%;
+  height: auto;
+  padding: 144px 0;
+  background-color: #ffffff;
+  &__wrapper {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  &__title {
+    max-width: 640px;
+    font-family: "FiveYearsLater", sans-serif;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 63px;
+    color: #171717;
+    margin-bottom: 40px;
+  }
+  &__carts {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 560px);
+    grid-gap: 40px;
+    .cart {
+      width: 100%;
+      height: auto;
+      padding: 24px 40px;
+      &:first-child {
+        display: flex;
+        height: 208px;
+        grid-column: 1;
+        background: rgba(205, 227, 255, 0.6);
+        border: 2px solid #a4c6f1;
+        box-sizing: border-box;
+        border-radius: 4px;
+        .cart__frames {
+          position: relative;
+          width: 387px;
+          height: 100%;
+          .cart__frame {
+            &:nth-child(1) {
+              top: 0;
+              right: 176px;
+            }
+            &:nth-child(2) {
+              top: 0;
+              right: 19px;
+            }
+            &:nth-child(3) {
+              top: 44px;
+              right: 143px;
+            }
+            &:nth-child(4) {
+              top: 44px;
+              right: 9px;
+            }
+            &:nth-child(5) {
+              top: 88px;
+              right: 47px;
+            }
+            &:nth-child(6) {
+              width: 239px;
+              right: 148px;
+              bottom: 0;
+            }
+            &:nth-child(7) {
+              bottom: 0;
+              right: 0;
+            }
+          }
+        }
+      }
+      &:nth-child(2) {
+        display: flex;
+        height: 208px;
+        grid-column: 2;
+        background: #f7f2ff;
+        border: 2px solid #caaaf3;
+        box-sizing: border-box;
+        border-radius: 4px;
+        .cart__frames {
+          position: relative;
+          width: 387px;
+          height: 100%;
+          .cart__frame {
+            &:nth-child(1) {
+              top: 0;
+              right: 47px;
+            }
+            &:nth-child(2) {
+              top: 44px;
+              right: 126px;
+            }
+            &:nth-child(3) {
+              top: 44px;
+              right: 0;
+            }
+            &:nth-child(4) {
+              top: 88px;
+              right: 207px;
+            }
+            &:nth-child(5) {
+              top: 88px;
+              right: 45px;
+            }
+            &:nth-child(6) {
+              width: auto;
+              right: 178px;
+              bottom: 0;
+            }
+            &:nth-child(7) {
+              bottom: 0;
+              right: 0;
+            }
+          }
+        }
+      }
+      &:last-child {
+        overflow: hidden;
+        position: relative;
+        grid-column: span 2;
+        background: rgba(245, 123, 81, 0.2);
+        border: 2px solid #f57b51;
+        box-sizing: border-box;
+        border-radius: 4px;
+        .cart__title {
+          width: 392px;
+          text-align: center;
+          margin: 0 auto;
+        }
+        picture {
+          position: absolute;
+          &:first-child {
+            left: 35px;
+            top: -9px;
+          }
+          &:nth-child(3){
+            right: 18px;
+            top: -5px;
+          }
+          &.cart__image--mobile {
+            display: none;
+          }
+        }
+      }
+      &__title {
+        font-family: "Five Years Later";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 27px;
+        line-height: 36px;
+        color: #171717;
+      }
+      &__frames {
+        position: relative;
+        width: 387px;
+        height: 100%;
+        .cart__frame {
+          position: absolute;
+          width: auto;
+          height: auto;
+          padding: 8px 16px;
+          font-family: "FiveYearsLater", sans-serif;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 15px;
+          line-height: 81.9%;
+          text-transform: lowercase;
+          color: #171717;
+          background: #ffffff;
+          border-radius: 8px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    padding: 72px 0;
+    &__title {
+      font-size: 32px;
+      line-height: 42px;
+      margin-bottom: 24px;
+    }
+    &__carts {
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 16px;
+      .cart {
+        width: 100%;
+        padding: 24px 16px;
+        &:first-child {
+          height: 272px;
+          flex-direction: column;
+          .cart__frames {
+            position: relative;
+            max-width: 268px;
+            width: 100%;
+            height: 100%;
+            margin-top: 16px;
+            align-self: center;
+            .cart__frame {
+              height: auto;
+              &:nth-child(1) {
+                top: 0;
+                right: 50px;
+              }
+              &:nth-child(2) {
+                top: 36px;
+                right: 0;
+              }
+              &:nth-child(3) {
+                top: 36px;
+                right: 141px;
+              }
+
+              &:nth-child(4) {
+                top: 108px;
+                right: 0;
+              }
+              &:nth-child(5) {
+                top: 72px;
+                right: auto;
+                left: 0;
+              }
+              &:nth-child(6) {
+                width: 239px;
+                right: auto;
+                left: 0;
+                bottom: auto;
+                top: 144px;
+              }
+              &:nth-child(7) {
+                bottom: auto;
+                top: 108px;
+                right: 118px;
+              }
+            }
+          }
+        }
+        &:nth-child(2) {
+          flex-direction: column;
+          height: 272px;
+          grid-column: 1;
+          .cart__frames {
+            max-width: 268px;
+            width: 100%;
+            margin-top: 16px;
+            align-self: center;
+            .cart__frame {
+              &:nth-child(1) {
+                width: auto;
+                top: 0;
+                right: 7px;
+              }
+              &:nth-child(2) {
+                top: 36px;
+                right: 137px;
+              }
+              &:nth-child(3) {
+                top: 36px;
+                right: 27px;
+              }
+              &:nth-child(4) {
+                top: 72px;
+                right: 148px;
+              }
+              &:nth-child(5) {
+                top: 72px;
+                right: 2px;
+              }
+              &:nth-child(6) {
+                width: auto;
+                right: 71px;
+                bottom: auto;
+                top: 108px;
+              }
+              &:nth-child(7) {
+                bottom: auto;
+                top: 144px;
+                right: 27px;
+              }
+            }
+          }
+        }
+        &:last-child {
+          height: 432px;
+          overflow: hidden;
+          position: relative;
+          grid-column: 1;
+          background: rgba(245, 123, 81, 0.2);
+          border: 2px solid #f57b51;
+          box-sizing: border-box;
+          border-radius: 4px;
+          display: flex;
+          flex-direction: column;
+          .cart__title {
+            width: 264px;
+            font-size: 27px;
+            line-height: 36px;
+            text-align: left;
+            margin: 0;
+          }
+          picture {
+            position: absolute;
+            &:first-child {
+              display: none;
+            }
+            &:nth-child(3) {
+              display: none;
+            }
+            &.cart__image--mobile {
+              display: block;
+              position: relative;
+              width: 100%;
+              img {
+                width: auto;
+              }
+            }
+          }
+        }
+        &__title {
+          font-family: "Five Years Later", sans-serif;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 27px;
+          line-height: 36px;
+          color: #171717;
+        }
+        &__frames {
+          position: relative;
+          width: 387px;
+          height: 100%;
+          .cart__frame {
+            position: absolute;
+            width: auto;
+            height: auto;
+            padding: 8px 16px;
+            font-family: "FiveYearsLater", sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 81.9%;
+            text-transform: lowercase;
+            color: #171717;
+            background: #ffffff;
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+      }
+    }
+  }
+}

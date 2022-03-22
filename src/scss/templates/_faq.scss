@@ -1,0 +1,125 @@
+.faq {
+  width: 100%;
+  height: auto;
+  padding: 144px 0;
+  background-color: #cde3ff;
+  &__wrapper {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  &__title {
+    font-family: "FiveYearsLater", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 63px;
+    color: #171717;
+    margin-bottom: 40px;
+  }
+  &__accordion {
+    width: 100%;
+    height: auto;
+    .accordion__list {
+      .accordion {
+        overflow: hidden;
+        &.open {
+          .accordion__content {
+            width: 100%;
+          }
+        }
+        &__content {
+          max-width: 1160px;
+          box-sizing: border-box;
+          p {
+            width: 100%;
+          }
+          .content__list {
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            padding-left: 11px;
+            .list__item {
+              position: relative;
+              width: 100%;
+              height: auto;
+              padding-left: 14px;
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 24px;
+              color: #171717;
+              &:not(:last-child) {
+                margin-bottom: 8px;
+              }
+              &::before {
+                width: 4px;
+                height: 4px;
+                border-radius: 100%;
+                background-color: #171717;
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 11.5px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    &__title {
+      font-size: 32px;
+      line-height: 42px;
+    }
+    &__accordion {
+      width: 100%;
+      height: auto;
+      .accordion__list {
+        .accordion {
+          overflow: hidden;
+          &.open {
+            .accordion__content {
+              width: 100%;
+            }
+          }
+          &__content {
+            max-width: calc(100vw - 20px);
+            box-sizing: border-box;
+            p {
+              width: 100%;
+            }
+            .content__list {
+              padding-left: 0;
+              .list__item {
+                font-size: 14px;
+                line-height: 20px;
+                color: #171717;
+                &:not(:last-child) {
+                  margin-bottom: 8px;
+                }
+                &::before {
+                  width: 4px;
+                  height: 4px;
+                  border-radius: 100%;
+                  background-color: #171717;
+                  content: "";
+                  position: absolute;
+                  left: 0;
+                  top: 11.5px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

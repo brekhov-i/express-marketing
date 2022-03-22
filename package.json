@@ -7,13 +7,17 @@
   "scripts": {
     "dev": "gulp",
     "build": "gulp build --build",
-    "wp": "gulp --wordpress"
+    "wp": "gulp --wordpress",
+    "jsProd": "gulp jsProd --build",
+    "imagesProd": "gulp imagesProd --build"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "gulp-cli": "^2.3.0",
-    "gulp-if": "^3.0.0"
+    "gulp-if": "^3.0.0",
+    "smoothscroll-polyfill": "^0.4.4",
+    "swiper": "^8.0.7"
   },
   "devDependencies": {
     "browser-sync": "^2.27.7",

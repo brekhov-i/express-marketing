@@ -14,7 +14,7 @@ global.app = {
 }
 
 import {copy} from './gulp/tasks/copy.js'
-import {reset} from './gulp/tasks/reset.js'
+import {reset, resetJS, resetImg} from './gulp/tasks/reset.js'
 import {html} from './gulp/tasks/html.js'
 import {server} from './gulp/tasks/server.js'
 import {scss} from './gulp/tasks/scss.js'
@@ -34,9 +34,14 @@ const mainTasks = gulp.series(otfToTtf, ttfToWoff, fontsStyle, gulp.parallel(cop
 
 const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));
 const build = gulp.series(reset, mainTasks);
+const jsProd = gulp.series(resetJS, js);
+const imagesProd = gulp.series(resetImg, images);
 
 export {dev}
 export {build}
+export {jsProd}
+export {imagesProd}
 
 gulp.task('default', dev)
-gulp.task('build', dev)
+gulp.task('build', build)
+gulp.task('js', jsProd)

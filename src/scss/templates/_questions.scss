@@ -1,0 +1,110 @@
+.questions {
+  width: 100%;
+  height: auto;
+  padding: 144px 0;
+  &__wrapper {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 100px;
+  }
+  &__title {
+    grid-column: 1;
+    grid-row: span 3;
+    font-family: "FiveYearsLater", sans-serif;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 63px;
+    color: #171717;
+  }
+  &__btn {
+    grid-column: 2;
+    width: 523px;
+    height: 59px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 4px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    color: #ffffff;
+    margin-bottom: 16px;
+    svg {
+      margin-right: 16px;
+    }
+    &.telegram {
+      background-color: #29a1db;
+    }
+    &.whatsapp {
+      background: #62a73a;
+    }
+  }
+  &__arrow {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  &__email {
+    grid-column: 2;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    color: #171717;
+    a {
+      border-bottom: 0.5px dashed #171717;
+      padding-bottom: 2px;
+    }
+  }
+
+  @media screen and (max-width: 576px) {
+    padding: 72px 0;
+    &__wrapper {
+      position: relative;
+      width: 100%;
+      height: auto;
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-column-gap: 0;
+    }
+    &__title {
+      grid-column: 1;
+      grid-row: auto;
+      font-size: 32px;
+      line-height: 42px;
+      margin-bottom: 87px;
+    }
+    &__btn {
+      grid-column: 1;
+      width: 100%;
+      font-size: 16px;
+      line-height: 24px;
+    }
+    &__arrow {
+      position: absolute;
+      bottom: auto;
+      left: auto;
+      right: 0;
+      top: 126px;
+    }
+    &__email {
+      grid-column: 1;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 26px;
+      color: #171717;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      a {
+        width: auto;
+        border-bottom: 0.5px dashed #171717;
+        padding-bottom: 2px;
+      }
+    }
+  }
+}

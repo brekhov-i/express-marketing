@@ -1,16 +1,26 @@
 <!DOCTYPE html>
 <html lang="ru">
   
-  @@include('@html/components/head.html', {title: 'Contentography', css: ""})
+  @@include('@html/components/head.html', {title: 'Contentography', css: "", desc: "", gtm: 0})
 
   <body>
-    <noscript>
-      <iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-5WC6VGN"
-        height="0"
-        width="0"
-        style="display: none; visibility: hidden"
-      ></iframe
-    ></noscript>
+    @@include('@html/components/btnUp.html', {})
+    @@include('@html/header.html', {})
+    @@include('@html/heroSection.html', {})
+    @@include('@html/aboutUs.html', {})
+    @@include('@html/forWhom.html', {})
+    @@include('@html/forProfersional.html', {})
+    @@include('@html/requirements.html', {})
+    @@include('@html/purpose.html', {})
+    @@include('@html/expert.html', {})
+    @@include('@html/resultStudent.html', {})
+    @@include('@html/schedule.html', {})
+    @@include('@html/resultsParticipants.html', {})
+    @@include('@html/result.html', {})
+    @@include('@html/tariff.html', {})
+    @@include('@html/faq.html', {})
+    @@include('@html/questions.html', {})
+    
+    <script src="@js/app.min.js"></script>
   </body>
 </html>

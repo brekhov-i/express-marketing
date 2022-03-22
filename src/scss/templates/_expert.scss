@@ -1,0 +1,205 @@
+.expert {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-color: #e0ded2;
+  padding: 144px 0;
+  padding-bottom: vw(396);
+  &__bgImg {
+    max-width: none;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 110%;
+  }
+  &__wrapper {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  &__title {
+    font-family: "FiveYearsLater", sans-serif;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 63px;
+    color: #171717;
+    margin-bottom: 40px;
+  }
+  &__content {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 452px 1fr;
+    grid-gap: 40px 64px;
+    padding: 64px;
+    padding-bottom: 0;
+    background: #ffffff;
+    border: 2px solid #e0ded2;
+    box-sizing: border-box;
+    border-radius: 4px;
+    margin-bottom: 40px;
+    .content__title {
+      grid-column: span 2;
+      font-family: "FiveYearsLater", sans-serif;
+      font-weight: 400;
+      font-size: 27px;
+      line-height: 36px;
+      color: #171717;
+    }
+    .content__directSpeech {
+      position: relative;
+      grid-column: span 2;
+      font-family: "Object Sans";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 26px;
+      color: #171717;
+      padding: 0 40px;
+      strong {
+        font-weight: 500;
+      }
+      &::before {
+        position: absolute;
+        left: 0;
+        top: -4px;
+        content: "«";
+        font-family: "FiveYearsLater", sans-serif;
+        font-size: 50px;
+        color: $colorPrimary;
+      }
+      &::after {
+        position: absolute;
+        right: 0;
+        bottom: -4px;
+        content: "»";
+        font-family: "FiveYearsLater", sans-serif;
+        font-size: 50px;
+        color: $colorPrimary;
+      }
+    }
+    .content__image {
+      grid-column: 1;
+      height: 100%;
+      width: 100%;
+      border-radius: 258px 258px 0 0;
+      overflow: hidden;
+      picture {
+        height: 100%;
+        width: 100%;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+    .content__list {
+      max-width: 458px;
+      grid-column: 2;
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      .list__item {
+        width: 100%;
+        height: auto;
+        padding-left: 24px;
+        position: relative;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #171717;
+
+        &:not(:last-child) {
+          margin-bottom: 16px;
+        }
+        &::before {
+          content: "";
+          width: 8px;
+          height: 8px;
+          border-radius: 100%;
+          background-color: #545862;
+          position: absolute;
+          left: 0;
+          top: 9px;
+        }
+      }
+    }
+  }
+  &__btn {
+    width: 500px;
+    align-self: center;
+  }
+
+  @media screen and (max-width: 576px) {
+    padding: 72px 0;
+    padding-bottom: vmin(596);
+    &__bgImg {
+      max-width: none;
+      position: absolute;
+      bottom: -35px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 115%;
+    }
+    &__title {
+      font-size: 32px;
+      line-height: 42px;
+      margin-bottom: 24px;
+    }
+    &__content {
+      grid-template-columns: 1fr;
+      grid-gap: 24px 0;
+      padding: 40px 16px;
+      margin-bottom: 0;
+      border-bottom: 0;
+      border-radius: 4px 4px 0 0;
+      .content__title {
+        grid-column: 1;
+        font-size: 24px;
+        line-height: 24px;
+      }
+      .content__directSpeech {
+        grid-column: 1;
+        padding: 0;
+        &::before {
+          position: relative;
+          left: auto;
+          top: auto;
+          content: "«";
+          font-size: 18px;
+        }
+        &::after {
+          position: relative;
+          right: auto;
+          bottom: auto;
+          content: "»";
+          font-size: 18px;
+        }
+      }
+      .content__image {
+        grid-column: 1;
+        border-radius: 0;
+      }
+      .content__list {
+        max-width: none;
+        grid-column: 1;
+        .list__item {
+          &:not(:last-child) {
+            margin-bottom: 8px;
+          }
+        }
+      }
+    }
+    &__btn {
+      width: 100%;
+    }
+  }
+}

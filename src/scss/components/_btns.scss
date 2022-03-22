@@ -1,0 +1,135 @@
+.slider-prev,
+.slider-next {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $colorPrimary;
+  transition: 0.5s all ease-in-out;
+  svg {
+    width: 50%;
+    height: auto;
+    fill: $colorWhite;
+  }
+  &:hover,
+  &:active {
+    background-color: $colorBtnActive;
+  }
+
+  @media (max-width: 576px) {
+    min-width: 32px;
+    width: 32px;
+    height: 32px;
+    svg {
+      width: 17px;
+    }
+  }
+}
+
+.btnWindowUp {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 61px;
+  height: 61px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s all ease-in-out;
+  background-color: $colorBlack;
+  svg {
+    fill: $colorWhite;
+  }
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $colorPrimary;
+  }
+  @media (max-width: 576px) {
+    width: 40px;
+    height: 40px;
+    svg {
+      height: 24px;
+    }
+  }
+}
+
+.videoPlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 96px;
+  height: 96px;
+  border-radius: 100%;
+  transition: 0.5s all ease-in-out;
+  background-color: $colorWhite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+  svg {
+    fill: $colorPrimary;
+    width: 43px;
+    height: auto;
+    margin-left: 8px;
+    transition: 0.5s all ease-in-out;
+  }
+
+  @media screen and (max-width: 576px) {
+    width: 84px;
+    height: 84px;
+    svg {
+      width: 38px;
+      height: auto;
+    }
+  }
+}
+
+.btnClose {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  svg {
+    path {
+      fill: $colorBlack;
+    }
+    rect {
+      fill: $colorWhite;
+    }
+  }
+}
+
+.btn--default {
+  width: 467px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 18px 0;
+  font-size: 18px;
+  line-height: 130%;
+  text-align: center;
+  letter-spacing: 0.01em;
+  color: $colorWhite;
+  background-color: $colorPrimary;
+  border-radius: 4px;
+  transition: 0.5s all ease-in-out;
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $colorBtnActive;
+    transition: 0.5s all ease-in-out;
+  }
+  @media screen and (max-width: 576px) {
+    width: 100%;
+    padding: 18px 0;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}

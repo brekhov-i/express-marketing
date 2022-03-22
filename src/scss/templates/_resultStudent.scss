@@ -1,0 +1,111 @@
+.resultStudent {
+  width: 100%;
+  height: auto;
+  padding: 144px 0;
+  background-color: #f4f3ee;
+  &__wrapper {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  &__title {
+    max-width: 660px;
+    font-family: "FiveYearsLater", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 63px;
+    color: #171717;
+    margin-bottom: 40px;
+    margin-left: max(10px, calc((100% - 1160px)/2));
+  }
+  &__slider {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-left:  max(10px, calc((100% - 1160px)/2));
+    .slider {
+      &__head {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 40px;
+        padding-right:  max(10px, calc((100% - 1160px))); 
+      }
+      &__desc {
+        max-width: 760px;
+        font-size: 24px;
+        line-height: 31px;
+      }
+      &__btns {
+        width: auto;
+        height: auto;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+      }
+      &__btn {
+        &.slider__btn--next {
+          margin-left: 32px;
+        }
+      }
+      &__content {
+        width: 100%;
+        height: auto;
+        .slide {
+          width: auto;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 576px) {
+    padding: 72px 0;
+    &__title {
+      font-size: 32px;
+      line-height: 42px;
+      margin-bottom: 24px;
+    }
+    &__slider {
+      .slider {
+        &__head {
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: flex-start;
+          margin-bottom: 40px;
+        }
+        &__desc {
+          font-size: 18px;
+          line-height: 26px;
+          margin-bottom: 24px;
+        }
+        &__btns {
+          align-self: flex-end;
+        }
+        &__btn {
+          &.slider__btn--next {
+            margin-left: 24px;
+          }
+        }
+        &__content {
+          width: 100%;
+          height: auto;
+          .slide {
+            width: 254px;
+            img {
+              width: 100%;
+              height: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+}

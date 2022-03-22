@@ -2,11 +2,30 @@
 @import './mixins';
 @import './fonts';
 @import './vars';
+@import './vendors';
 @import './settings';
 
 //Components
+@import './components/collapsible';
+@import './components//btnWindowUp';
 @import './components/timer';
 @import './components/btns';
+@import './components/accordion';
 @import './components/footer';
 
 //Templates
+@import './templates/header';
+@import './templates/heroSection';
+@import './templates/aboutUs';
+@import './templates/forWhom';
+@import './templates/forProfersional';
+@import './templates/requirements';
+@import './templates/purpose';
+@import './templates/expert';
+@import './templates/resultStudent';
+@import './templates/schedule';
+@import './templates/resultsParticipants';
+@import './templates/result';
+@import './templates/tariff';
+@import './templates/faq';
+@import './templates/questions';
